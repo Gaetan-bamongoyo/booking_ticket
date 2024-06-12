@@ -3,7 +3,10 @@ import 'package:booking/screen/widget/text_form.dart';
 import 'package:flutter/material.dart';
 
 class LoginUI extends StatelessWidget {
-  const LoginUI({super.key});
+  LoginUI({super.key});
+
+  final TextEditingController emailController =TextEditingController();
+  final TextEditingController passwordController =TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +40,16 @@ class LoginUI extends StatelessWidget {
                   ),
                   ),
                   const SizedBox(height: 20,),
-                  TextForm(),
+                  TextForm(
+                    controller: emailController,
+                    text: 'Email', textInputType: TextInputType.emailAddress,
+                    obscure: false,),
+                    const SizedBox(height: 20,),
+                  TextForm(
+                    controller: passwordController,
+                    text: 'Mot de passe',
+                    textInputType: TextInputType.text,
+                    obscure: true)
                     ],
                   )
                   
