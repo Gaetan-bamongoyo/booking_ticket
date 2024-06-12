@@ -1,3 +1,4 @@
+import 'package:booking/screen/utils/globalColors.dart';
 import 'package:flutter/material.dart';
 
 class TextForm extends StatelessWidget {
@@ -10,14 +11,17 @@ class TextForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      
       height: 50,
       padding: const EdgeInsets.symmetric(horizontal: 10),
+      
       decoration: BoxDecoration(
+        
         color: Colors.white,
         borderRadius: BorderRadius.circular(50),
         boxShadow: [
           BoxShadow(
-            color: Colors.green,
+            color: Globalcolors.mainColor,
             blurRadius: 1,
           )
           ],

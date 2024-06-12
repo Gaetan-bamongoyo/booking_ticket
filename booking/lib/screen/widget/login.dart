@@ -1,4 +1,5 @@
 import 'package:booking/screen/utils/globalColors.dart';
+import 'package:booking/screen/widget/button_global.dart';
 import 'package:booking/screen/widget/text_form.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +50,9 @@ class LoginUI extends StatelessWidget {
                     controller: passwordController,
                     text: 'Mot de passe',
                     textInputType: TextInputType.text,
-                    obscure: true)
+                    obscure: true),
+                     const SizedBox(height: 20,),
+                     ButtonGobal(),
                     ],
                   )
                   
