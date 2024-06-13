@@ -12,7 +12,7 @@ class ButtonGobal extends StatelessWidget {
         height: 50,
         decoration: BoxDecoration(
           color: Globalcolors.mainColor,
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
               color: Globalcolors.mainColor,
@@ -20,7 +20,7 @@ class ButtonGobal extends StatelessWidget {
             )
             ],
         ),
-        child: Text("Se Connecter",
+        child: const Text("Se Connecter",
         style: TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.w600,

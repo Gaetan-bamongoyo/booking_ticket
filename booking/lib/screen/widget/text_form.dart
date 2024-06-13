@@ -18,7 +18,7 @@ class TextForm extends StatelessWidget {
       decoration: BoxDecoration(
         
         color: Colors.white,
-        borderRadius: BorderRadius.circular(50),
+        borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
             color: Globalcolors.mainColor,
