@@ -1,16 +1,15 @@
-import 'package:booking/screen/register_page.dart';
 import 'package:flutter/material.dart';
 
 import 'widget/client/form.dart';
 
-class LoginPageUi extends StatefulWidget {
-  const LoginPageUi({super.key});
+class RegisterPageUi extends StatefulWidget {
+  const RegisterPageUi({super.key});
 
   @override
-  State<LoginPageUi> createState() => _LoginPageUiState();
+  State<RegisterPageUi> createState() => _RegisterPageUiState();
 }
 
-class _LoginPageUiState extends State<LoginPageUi> {
+class _RegisterPageUiState extends State<RegisterPageUi> {
   TextEditingController username = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class _LoginPageUiState extends State<LoginPageUi> {
             Padding(
               padding: const EdgeInsets.all(20),
               child: Container(
-                  height: screenHeight / 2.5,
+                  height: screenHeight / 2.1,
                   width: screenWidth,
                   decoration: BoxDecoration(
                       color: Colors.green.shade200,
@@ -53,24 +52,19 @@ class _LoginPageUiState extends State<LoginPageUi> {
                                     text: 'Email user', controller: username),
                                 TextFieldForm(
                                     text: 'Mot de passe', controller: username),
-                                Row(
+                                TextFieldForm(
+                                    text: 'Confirmer les mot de passer',
+                                    controller: username),
+                                const Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    const Text(
-                                      "Vous n'avez pas un compte ?",
+                                    Text(
+                                      "Vous avez deja un compte ?",
                                       style: TextStyle(fontSize: 10),
                                     ),
-                                    GestureDetector(
-                                      onTap: () => Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                const RegisterPageUi(),
-                                          )),
-                                      child: Text(
-                                        "Creer un compte",
-                                        style: TextStyle(fontSize: 12),
-                                      ),
+                                    Text(
+                                      "Connecter vous",
+                                      style: TextStyle(fontSize: 12),
                                     )
                                   ],
                                 ),
@@ -85,7 +79,7 @@ class _LoginPageUiState extends State<LoginPageUi> {
                                       borderRadius: BorderRadius.circular(5)),
                                   child: const Center(
                                       child: Text(
-                                    'Connexion',
+                                    'Enregistrer',
                                     style: TextStyle(color: Colors.white),
                                   )),
                                 )
